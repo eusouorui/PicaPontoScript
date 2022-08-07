@@ -1,4 +1,6 @@
-var timestring = $('#AssiduityTimeWorked').text();
+function ShowAlert()
+{
+    var timestring = $('#AssiduityTimeWorked').text();
 
     if (timestring[1] === "h") {
         var hoursString = timestring[0];
@@ -76,3 +78,4 @@ var timestring = $('#AssiduityTimeWorked').text();
             "\n2 breaks (15 min cada): " + withTwoBreaksHour + "h " + withTwoBreaksMinute + "m"
         );
     }
+}
