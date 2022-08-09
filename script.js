@@ -39,10 +39,10 @@ function ShowAlert() {
         var today = new Date();
         var currentHour = today.getHours();
         var currentMinute = today.getMinutes();
+        var nowEpoch = Math.trunc(today.getTime() / 1000) + intHours * 3600 + intMinutesLeft * 60;
 
         currentHour += intHours;
         currentMinute += intMinutesLeft;
-
 
         while (currentMinute >= 60) {
             currentHour++;
@@ -52,16 +52,14 @@ function ShowAlert() {
             currentMinute -= 60;
         }
 
-        alertMessage = "Faltam " + intHours + "h " + intMinutesLeft + "m" +
-            "\nSais às " + currentHour + "h " + currentMinute + "m";
+        alertMessage = "\nFaltam " + intHours + "h " + intMinutesLeft + "m" +
+            "\nSais às " + currentHour + "h " + currentMinute + "m - " + "<t:" + nowEpoch + ":R>";
 
-        var oneHourLunchHour = currentHour + 1;
-        var oneHourLunchMinute = currentMinute;
-
-
-        if (intHours * 60 + intMinutes < 60 * 5) {
-            oneHourLunchMessage = "\n1h de almoço sais às " + oneHourLunchHour + "h " + oneHourLunchMinute + "m";
-
+            
+        if (intHours * 60 + intMinutes > 60 * 5) {
+            var oneHourLunchHour = currentHour + 1;
+            var oneHourLunchMinute = currentMinute;
+        
             if (currentMinute >= 30) {
                 var lunchTimeMin = currentMinute - 30;
                 var lunchTimeHour = currentHour + 1;
@@ -70,12 +68,10 @@ function ShowAlert() {
                 lunchTimeMin = currentMinute + 30;
                 lunchTimeHour = currentHour;
             }
-            alertMessage += "\n\n30 min de almoço sais às " + lunchTimeHour + "h " + lunchTimeMin + "m" +
-                oneHourLunchMessage;
 
-            lunchTimeHour = lunchTimeHour + 1;
-
-            alertMessage += "\n1h 30 min de almoço sais às " + lunchTimeHour + "h " + lunchTimeMin + "m";
+            alertMessage += "\n\n30 min de almoço sais às " + lunchTimeHour + "h " + lunchTimeMin + "m - " + "<t:" + (nowEpoch + 30 * 60) + ":R>" +
+                            "\n1h de almoço sais às " + oneHourLunchHour + "h " + oneHourLunchMinute + "m - " + "<t:" + (nowEpoch + 60 * 60) + ":R>" +
+                            "\n1h 30 min de almoço sais às " + (lunchTimeHour + 1) + "h " + lunchTimeMin + "m - " + "<t:" + (nowEpoch + 90 * 60) + ":R>";
         }
 
         if (currentMinute >= 45) {
