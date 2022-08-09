@@ -7,7 +7,7 @@ Copy the <a href="https://github.com/eusouorui/PicaPontoScript/blob/master/scrip
 ### For Testing 
 - Clone the project
 - Open the index.html 
-- Click on the time
+- Click on the page
 
 Manually change the time for the message to vary
 
