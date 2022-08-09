@@ -60,7 +60,7 @@ function ShowAlert() {
 
         oneHourLunchMessage = "\n1h de almoço sais às " + oneHourLunchHour + "h " + oneHourLunchMinute + "m";
 
-        if (intHours * 60 + intMinutes < 60 * 5) {
+        if (intHours * 60 + intMinutes > 60 * 5) {
             if (currentMinute >= 30) {
                 var lunchTimeMin = currentMinute - 30;
                 var lunchTimeHour = currentHour + 1;
