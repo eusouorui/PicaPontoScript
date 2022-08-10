@@ -74,27 +74,9 @@ function ShowAlert() {
                             "\n1h 30 min de almoço sais às " + (lunchTimeHour + 1) + "h " + lunchTimeMin + "m - " + "<t:" + (nowEpoch + 90 * 60) + ":R>";
         }
 
-        if (currentMinute >= 45) {
-            var withOneBreakMinute = currentMinute - 45;
-            var withOneBreakHour = currentHour + 1;
-        }
-        else {
-            var withOneBreakMinute = currentMinute + 15;
-            var withOneBreakHour = currentHour;
-        }
-        alertMessage += "\n\n1 break (15 min): " + withOneBreakHour + "h " + withOneBreakMinute + "m";
+        alertMessage += "\n\nA cada break acrescer o valor expectável";
 
-        if (intHours * 60 + intMinutes < 60 * 3) {
-            if (currentMinute >= 30) {
-                var withTwoBreaksMinute = currentMinute - 30;
-                var withTwoBreaksHour = currentHour + 1;
-            }
-            else {
-                var withTwoBreaksMinute = currentMinute + 30;
-                var withTwoBreaksHour = currentHour;
-            }
-            alertMessage += "\n2 breaks (15 min cada): " + withTwoBreaksHour + "h " + withTwoBreaksMinute + "m";
-        }
+        
 
         alert(alertMessage);
     }
