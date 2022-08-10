@@ -73,11 +73,7 @@ function ShowAlert() {
                             "\n1h de almoço sais às " + oneHourLunchHour + "h " + oneHourLunchMinute + "m - " + "<t:" + (nowEpoch + 60 * 60) + ":R>" +
                             "\n1h 30 min de almoço sais às " + (lunchTimeHour + 1) + "h " + lunchTimeMin + "m - " + "<t:" + (nowEpoch + 90 * 60) + ":R>";
         }
-
         alertMessage += "\n\nA cada break acrescer o valor expectável";
-
-        
-
         alert(alertMessage);
     }
 }
