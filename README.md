@@ -3,7 +3,7 @@
 ## How to use it 
 Hello JD worker
 
-Copy the <a href="https://github.com/eusouorui/PicaPontoScript/blob/master/script.js" target="_blank">script.js</a>'s function code and run it in the console while on the assiduity page 😄
+Copy the <a href="https://github.com/eusouorui/PicaPontoScript/blob/master/script.js" target="_blank">script.js</a>'s ***function <ins>code</ins>*** and run it in the console while on the assiduity page 😄
 
 ### What it does
 This will generate an alert with info about when you'll complete 8h with different lunch times considered.
