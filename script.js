@@ -16,7 +16,7 @@ function ShowAlert() {
     var minutesString = timestring;
     var intMinutes = parseInt(minutesString) + parseInt(hoursString) * 60;
 
-    if (intMinutes > 480) {
+    if (intMinutes >= 480) {
         alert("Já devias era estar em casa");
     }
     else {
