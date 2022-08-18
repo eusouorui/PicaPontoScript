@@ -56,7 +56,7 @@ function ShowAlert() {
             "\nSais às " + currentHour + "h " + currentMinute + "m - " + "<t:" + nowEpoch + ":R>";
 
             
-        if (intHours * 60 + intMinutes > 60 * 5) {
+        if (intHours * 60 + intMinutesLeft > 240) {
             var oneHourLunchHour = currentHour + 1;
             var oneHourLunchMinute = currentMinute;
         
