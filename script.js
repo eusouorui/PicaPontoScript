@@ -17,7 +17,7 @@ function ShowAlert() {
     var intMinutes = parseInt(minutesString) + parseInt(hoursString) * 60;
 
     if (intMinutes >= 480) {
-        alert("Já devias era estar em casa");
+        alert("Time to go");
     }
     else {
         var alertMessage;
